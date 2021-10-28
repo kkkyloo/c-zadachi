@@ -1,0 +1,31 @@
+Задание: Напишите программу, которая сравнивает, введенное пользователем, целое число с нулем, и выводит одно из сообщений:
+
+число отрицательное;
+число равно нулю;
+число положительное.
+
+using System;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x;
+            x = Convert.ToInt32(Console.ReadLine());
+            if (x < 0)
+            {
+                Console.Write("число отриц");
+            }
+            else if (x == 0)
+            {
+                Console.Write("число равно 0");
+            }
+            else if (x>0)
+            {
+                Console.Write("число больше нуля");
+            }
+        }
+    }
+}
