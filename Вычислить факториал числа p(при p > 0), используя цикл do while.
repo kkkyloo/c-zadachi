@@ -12,14 +12,17 @@ namespace ConsoleApp5
             int fakt = 1;
             int i = 1;
             p = Convert.ToInt32(Console.ReadLine());
-            do
+            if (p > 0)
             {
-                fakt *= i;
-                i++;
+                do
+                {
+                    fakt *= i;
+                    i++;
+                }
+                while (i <= p);
+                Console.WriteLine(fakt);
+                Console.ReadLine();
             }
-            while (i <= p);
-            Console.WriteLine(fakt);
-            Console.ReadLine();
         }
     }
 }
