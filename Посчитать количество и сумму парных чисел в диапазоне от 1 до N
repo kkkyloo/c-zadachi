@@ -1,0 +1,24 @@
+using System;
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Посчитать количество и сумму парных чисел в диапазоне от 1 до N.
+            int N, k, s;
+            k = 0;
+            s = 0;
+            N = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i < N; i += 2)
+            {
+                s += i;
+                k++;
+            }
+            Console.WriteLine("сумма: " + s);
+            Console.WriteLine("колличесвто: " + k);
+            Console.ReadLine();           
+        }
+    }
+}
