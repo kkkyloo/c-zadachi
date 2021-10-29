@@ -1,0 +1,25 @@
+Вычислить факториал числа p(при p > 0), используя цикл do while.
+
+using System;
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int p;
+            int fakt = 1;
+            int i = 1;
+            p = Convert.ToInt32(Console.ReadLine());
+            do
+            {
+                fakt *= i;
+                i++;
+            }
+            while (i <= p);
+            Console.WriteLine(fakt);
+            Console.ReadLine();
+        }
+    }
+}
