@@ -1,0 +1,15 @@
+using System;
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string x = Console.ReadLine();
+            string y = x.Replace(":", "%");
+            Console.WriteLine(y);
+            Console.ReadLine();
+        }
+    }
+}
