@@ -7,16 +7,16 @@ class Program
 //static void Perimeter(...);
 //Указание 3: Не забудьте преобразовать введенные значения в целые числа.Например:
 //int a = int.Parse(Console.ReadLine());
-    static void Perimeter(int a, int b, int c)
+    static void Perimeter(float a, float b, float c)
             {
-        int Per = a + b + c;
+        float Per = a + b + c;
         Console.WriteLine(Per);
             }
             static void Main(string[] args)
             {
-        int a = int.Parse(Console.ReadLine());
-        int b = int.Parse(Console.ReadLine());
-        int c = int.Parse(Console.ReadLine());
+        float a = float.Parse(Console.ReadLine());
+        float b = float.Parse(Console.ReadLine());
+        float c = float.Parse(Console.ReadLine());
         Perimeter(a,b,c);
                 Console.ReadLine();
             }
