@@ -1,0 +1,15 @@
+static void Main(string[] args)
+{
+   int i, a, x, sum;
+   for (i = 120; i <= 140; i++)
+   {
+      sum = 0;
+      for (a = 1; a <= 140; a++)
+      {
+         x = i % a;
+         if (x == 0)
+            sum += 1;
+      }
+      Console.WriteLine(sum);
+   }
+}
