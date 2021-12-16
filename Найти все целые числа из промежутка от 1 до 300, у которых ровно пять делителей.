@@ -1,0 +1,16 @@
+static void Main(string[] args)
+{
+   int i, a, x, sum;
+   for (i = 1; i <= 300; i++)
+   {
+      sum = 0;
+      for (a = 1; a <= 300; a++)
+      {
+         x = i % a;
+         if (x == 0)
+           sum += 1;
+      }
+      if (sum == 5)
+         Console.WriteLine(i);
+   }
+}
