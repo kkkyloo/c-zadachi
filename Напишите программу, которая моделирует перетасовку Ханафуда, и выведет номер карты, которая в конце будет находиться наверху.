@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        while (true)
+        {
+            var prts = Array.ConvertAll(Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries),
+              s => int.Parse(s));
+
+            var n = prts[0];
+            var r = prts[1];
+
+            if (n == 0 && r == 0)
+                return;
+
+            var list = new List<int>();
+            for (var i = n; i >= 1; i--)
+            {
+                list.Add(i);
+            }
+
+            for (var i = 0; i < r; i++)
+            {
+                prts = Array.ConvertAll(Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries),
+                s => int.Parse(s));
+                var p = prts[0] - 1;
+                var c = prts[1];
+
+                var tmpList = new List<int>();
+
+                tmpList.AddRange(list.Skip(p).Take(c));
+                tmpList.AddRange(list.Take(p));
+                tmpList.AddRange(list.Skip(p + c));
+
+                list = tmpList;
+            }
+
+            Console.WriteLine(list[0]);
+        }
+    }
+}
